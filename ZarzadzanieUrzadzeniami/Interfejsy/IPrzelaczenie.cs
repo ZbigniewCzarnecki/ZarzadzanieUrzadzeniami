@@ -1,4 +1,4 @@
-﻿namespace ZarzadzanieUrzadzeniami;
+﻿namespace ZarzadzanieUrzadzeniami.Interfejsy;
 
 interface IPrzelaczenie
 {

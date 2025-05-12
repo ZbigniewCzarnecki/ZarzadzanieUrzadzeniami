@@ -1,4 +1,4 @@
-﻿namespace ZarzadzanieUrzadzeniami;
+﻿namespace ZarzadzanieUrzadzeniami.Urzadzenia;
 abstract class Urzadzenie
 {
     private int _idUrzadzenia;
@@ -12,11 +12,9 @@ abstract class Urzadzenie
         Wylaczone
     }
 
-    protected string Nazwa
-    {
-        get => _nazwaPrzyjazna;
-        set => _nazwaPrzyjazna = value;
-    }
+    protected string Nazwa => _nazwaPrzyjazna;
+    protected string Lokalizacja => _lokalizacja;
+    protected int ID => _idUrzadzenia;
 
     protected Urzadzenie(int id, string nazwa, string lokalizacja, Status status)
     {
