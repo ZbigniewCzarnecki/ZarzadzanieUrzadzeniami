@@ -4,7 +4,7 @@ namespace ZarzadzanieUrzadzeniami.Urzadzenia;
 
 class Termostat : Urzadzenie, IRegulowanie
 {
-    private int _temperatura;
+    private int _temperatura = 19;
 
     public Termostat(int id, string nazwa, string lokalizacja) : base(id, nazwa, lokalizacja, Status.Wlaczone)
     {
@@ -16,7 +16,8 @@ class Termostat : Urzadzenie, IRegulowanie
             + "\nID: " + ID
             + "\nStatus: " + PobierzStatus()
             + "\nLokalizacja: " + Lokalizacja
-            + "\nDocelowana Temperatura: " + _temperatura + "°C";
+            + "\nDocelowana Temperatura: " + _temperatura + "°C"
+            + "\n";
     }
 
     public void UstawPoziom(int nowaWartosc)

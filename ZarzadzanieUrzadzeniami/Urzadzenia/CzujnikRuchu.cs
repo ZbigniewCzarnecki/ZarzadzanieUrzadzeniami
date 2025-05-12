@@ -4,7 +4,7 @@ class CzujnikRuchu : Urzadzenie
 {
     private int _czasWykrycia = 1;
 
-    public CzujnikRuchu(int id, string nazwa, string lokalizacja) : base(id, nazwa, lokalizacja, Status.Wylaczone)
+    public CzujnikRuchu(int id, string nazwa, string lokalizacja) : base(id, nazwa, lokalizacja, Status.Wlaczone)
     {
     }
 
@@ -14,6 +14,7 @@ class CzujnikRuchu : Urzadzenie
             + "\nID: " + ID
             + "\nStatus: " + PobierzStatus()
             + "\nLokalizacja: " + Lokalizacja
-            + "\nCzas Wykrycia: " + _czasWykrycia + "°C";
+            + "\nCzas Wykrycia: " + _czasWykrycia
+            + "\n";
     }
 }

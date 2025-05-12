@@ -2,10 +2,8 @@
 
 namespace ZarzadzanieUrzadzeniami.Urzadzenia;
 
-class Lampa : Urzadzenie, IPrzelaczenie, IRegulowanie
+class Lampa : Urzadzenie, IPrzelaczenie
 {
-    private int _poziomJasnosci;
-
     public Lampa(int id, string nazwa, string lokalizacja) : base(id, nazwa, lokalizacja, Status.Wylaczone)
     {
     }
@@ -20,17 +18,12 @@ class Lampa : Urzadzenie, IPrzelaczenie, IRegulowanie
         ZmienStatus(Status.Wylaczone);
     }
 
-    public void UstawPoziom(int nowyPoziom)
-    {
-        _poziomJasnosci = nowyPoziom;
-    }
-
     public override string PobierzSzczegolowyOpis()
     {
-        return "\n" + Nazwa + ":" 
+        return "\n" + Nazwa + ":"
             + "\nID: " + ID
             + "\nStatus: " + PobierzStatus()
             + "\nLokalizacja: " + Lokalizacja
-            + "\nPoziom Jasności: " + _poziomJasnosci;
+            + "\n";
     }
 }

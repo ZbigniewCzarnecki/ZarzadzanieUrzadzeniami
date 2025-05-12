@@ -12,9 +12,9 @@ abstract class Urzadzenie
         Wylaczone
     }
 
-    protected string Nazwa => _nazwaPrzyjazna;
-    protected string Lokalizacja => _lokalizacja;
-    protected int ID => _idUrzadzenia;
+    public string Nazwa => _nazwaPrzyjazna;
+    public string Lokalizacja => _lokalizacja;
+    public int ID => _idUrzadzenia;
 
     protected Urzadzenie(int id, string nazwa, string lokalizacja, Status status)
     {
